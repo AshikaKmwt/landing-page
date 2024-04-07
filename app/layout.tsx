@@ -13,21 +13,19 @@ export const metadata: Metadata = {
   description: "To attract users",
 };
 
-export default function RootLayout ({children}) {
-
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header/>
+      <Header/>
         {children}
         <Btn/>
         <Footer/>
-        
         </body>
     </html>
   );
-
 }
-
-
-
